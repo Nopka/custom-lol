@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Entrez le noms des joueurs</h1>
+        <h1>Entrez le nom des joueurs</h1>
         <form v-on:submit.prevent="addPlayer()">
             <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Nom du joueur" aria-label="Nom du joueur" aria-describedby="button-addon2" v-model="joueurInput">
