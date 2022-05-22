@@ -1,6 +1,9 @@
 <template>
     <div>
-        <h1>Entrez le noms des joueurs</h1>
+        <p>
+            <button class="btn btn-success" @click="setUsualRoaster()">Ajouter le roaster habituel</button>
+        </p>
+        <h1>Entrez le nom des joueurs</h1>
         <form v-on:submit.prevent="addPlayer()">
             <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Nom du joueur" aria-label="Nom du joueur" aria-describedby="button-addon2" v-model="joueurInput">
@@ -74,7 +77,15 @@
                     equipe2top:'-',
                     equipe2mid:'-',
                     equipe2bot:'-'
-                }
+                },
+                UsualRoaster:[
+                    "Hugo",
+                    "Erwan",
+                    "Leo",
+                    "Richard",
+                    "Victorien",
+                    "Adrien"
+                ]
             }
         },
         methods:{
@@ -109,32 +120,37 @@
                 switch (role) {
                     case "top1":
                         this.equipes.equipe1top = player;
-                        console.log(player,role);
+                        // console.log(player,role);
                         break;
                     case "mid1":
                         this.equipes.equipe1mid = player;
-                        console.log(player,role);
+                        // console.log(player,role);
                         break;
                     case "bot1":
                         this.equipes.equipe1bot = player;
-                        console.log(player,role);
+                        // console.log(player,role);
                         break;
                     case "top2":
                         this.equipes.equipe2top = player;
-                        console.log(player,role);
+                        // console.log(player,role);
                         break;
                     case "mid2":
                         this.equipes.equipe2mid = player;
-                        console.log(player,role);
+                        // console.log(player,role);
                         break;
                     case "bot2":
                         this.equipes.equipe2bot = player;
-                        console.log(player,role);
+                        // console.log(player,role);
                         break;
                     default:
                         console.log("erreur lors de l'attribution des rôles");
                         break;
                 }
+            },
+            setUsualRoaster(){
+                this.UsualRoaster.forEach(joueur => {
+                    this.joueurs.push(joueur);
+                });
             }
         }
         
