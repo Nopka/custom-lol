@@ -15,11 +15,6 @@ const routes = [
     path: '/custom',
     name: 'custom-game',
     component: () => import('../views/CustomGame.vue')
-  },
-  {
-    path: '/champ',
-    name: 'dispatch-champs',
-    component: () => import('../views/DispatchChamps.vue')
   }
 ]
 
